@@ -4,7 +4,7 @@ def recur_sum(numbers):
 
     for index in range(len(numbers)):
         if isinstance(numbers[index], list):
-           return total + total_sum(numbers[index])
+            return total + recur_sum(numbers[index])
 
         total += numbers[index]
     return total
